@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dylan Samaan's Web Reviews</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="hud">
+        <div class="screen">
+            <h1 class="hud-title">The Three Favorites</h1>
+
+            <div class="menu-buttons">
+                <button data-link="unesco.html" data-desc="A stylisctic modern animated experience.">
+                    UNESCO Virtual Museum
+                </button>
+
+                <button data-link="shopify.html" data-desc="An unbelievably entertaining interactive company recap.">
+                    Shopify Live Globe
+                </button>
+
+                <button data-link="bruno.html" data-desc="A brilliantly crafted adventure through a portfolio display.">
+                    Bruno's Portfolio
+                </button>
+                </div>
+                </div>
+                </body>
+                
+                
+<script>
+    document.querySelectorAll(".menu-buttons button").forEach(btn => {
+        btn.addEventListener("click", () => {
+            window.location.href = btn.dataset.link;
+        });
+    });
+</script>
+
+                </html>
+

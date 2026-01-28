@@ -1,0 +1,225 @@
+/* 
+    Font
+    */
+@font-face {
+    font-family: "PortFont";
+    src: url("../assets/fonts/potfont.ttf") format("truetype");
+}
+
+/* 
+   Main page 
+*/
+
+body {
+    min-height: 100vh;
+    /* makes fit screen height */
+    background: #555761;
+    /* background color */
+    font-family: "PortFont",
+        monospace;
+    color: white;
+    /* default text color */
+    margin: 0;
+}
+
+/* 
+    Menu container
+*/
+.hud {
+    min-height: 100vh;
+    /* full height */
+    display: flex;
+    /* flexbox layout */
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering */
+}
+
+/* 
+    Title
+*/
+.hud-title {
+    font-size: 3.5rem;
+    /* title */
+    margin-bottom: 2.5rem;
+    /* space below title */
+    letter-spacing: 0.08em;
+    /* slightly spaced letters for emphasis */
+    font-weight: 900;
+    /* heavy weight for strong hierarchy */
+}
+
+/* 
+   Menu layout
+*/
+.menu-buttons {
+    display: flex;
+    /* stack buttons using flexbox */
+    flex-direction: column;
+    /* vertical button layout */
+    gap: 1.2rem;
+    /* space between buttons */
+}
+
+/* 
+   Menu buttons
+*/
+.menu-buttons button {
+    font-family: "PortFont", monospace;
+
+    
+    padding: 1.1rem 3rem;
+    /* area spacing */
+    font-size: 1.5rem;
+    /* text */
+    background: rgba(255, 255, 255, 0.08);
+    /* translucent background */
+    color: white;
+    /* button text color */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* outline */
+    cursor: pointer;
+    /* pointer cursor on hover */
+    transition: all 0.2s ease;
+    /* hover animation */
+}
+
+/* 
+   Button hover 
+*/
+.menu-buttons button:hover {
+    background: rgba(255, 255, 255, 0.18);
+    /* brighter on hover */
+    transform: translateY(-6px);
+    /* lift effect */
+}
+
+/* 
+    description text
+*/
+.menu-buttons button::after {
+    content: attr(data-desc);
+    /* pull description */
+    display: block;
+    /* place description */
+    margin-top: 0.5rem;
+    /* space between title and description */
+    font-size: 1.15rem;
+    /* smaller than button title */
+    color: rgba(255, 255, 255, 0.65);
+    /* text color */
+    font-weight: 400;
+    /* lighter text */
+}
+
+/* 
+   Back navigation button
+*/
+.back-button {
+    position: fixed;
+    /* always visible */
+    top: 18px;
+    /* distance from top */
+    left: 18px;
+    /* distance from left */
+    z-index: 9999;
+    /* always above all content */
+    
+  font-family: "PortFont", monospace;
+  
+    text-decoration: none;
+    /* remove underline */
+  
+    font-size: 25px;
+    /* button size */
+    color: rgba(255, 255, 255, 0.85);
+    /* back button color */
+
+    background: rgba(183, 164, 164, 0.719);
+    /* translucent */
+    padding: 10px 14px;
+}
+
+.back-button:hover {
+    background: rgba(99, 97, 97, 0.759);
+    /* brighter background on hover */
+    transform: translateY(-6px);
+    /* lift effect */
+        transition: all 0.2s ease;
+            /* smooth hover */
+}
+
+
+/* 
+   Banner image
+*/
+.banner img {
+    width: 100%;
+    /* span full width */
+    height: 460px;
+    /* fixed height */
+    object-fit: cover;
+    /* crop image without distortion */
+    display: block;
+}
+
+/* 
+   Article container
+*/
+.article {
+    font-family: "PortFont", monospace;
+    font-size: 1.4rem;
+    max-width: 1620px;
+    /* paragraph width */
+    margin: 0.5rem auto;
+    /* center horizontally */
+    padding: 1.5rem;
+    position: relative;
+    /* anchor for corner image */
+}
+
+/* 
+   Article header
+*/
+.article-title {
+    font-family: "PortFont", monospace;
+    font-size: 3.4rem;
+    /* article title size */
+    margin-bottom: 0.2rem;
+    /* tight spacing to subheading */
+
+}
+
+/* 
+   Article subheader
+*/
+.article-sub {
+    font-family: "PortFont", monospace;
+    font-size: 1.5rem;
+    /* smaller than title */
+    font-weight: 400;
+    /* lighter weight */
+    opacity: 0.7;
+    /* muted appearance */
+    margin-bottom: 4rem;
+    /* space before body text */
+}
+
+/*
+    Link to website
+*/
+
+.banner a {
+    font-family: "PortFont", monospace;
+    font-size: 0.8rem;
+    font-weight: 400;
+        color: white;
+        /* make link white */
+    }
+    
+        /* Hover */
+        a:hover {
+            color: rgb(197, 197, 202);
+ 
+        }
