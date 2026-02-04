@@ -1,5 +1,5 @@
 /* 
-    Font
+    font
     */
 @font-face {
     font-family: "PortFont";
@@ -7,7 +7,7 @@
 }
 
 /* 
-   Main page 
+   main page 
 */
 
 body {
@@ -23,7 +23,7 @@ body {
 }
 
 /* 
-    Menu container
+    menu container
 */
 .hud {
     min-height: 100vh;
@@ -37,7 +37,7 @@ body {
 }
 
 /* 
-    Title
+    title
 */
 .hud-title {
     font-size: 3.5rem;
@@ -51,7 +51,7 @@ body {
 }
 
 /* 
-   Menu layout
+   menu layout
 */
 .menu-buttons {
     display: flex;
@@ -63,7 +63,7 @@ body {
 }
 
 /* 
-   Menu buttons
+   menu buttons
 */
 .menu-buttons button {
     font-family: "PortFont", monospace;
@@ -86,7 +86,7 @@ body {
 }
 
 /* 
-   Button hover 
+   button hover 
 */
 .menu-buttons button:hover {
     background: rgba(255, 255, 255, 0.18);
@@ -114,7 +114,7 @@ body {
 }
 
 /* 
-   Back navigation button
+   back navigation button
 */
 .back-button {
     position: fixed;
@@ -141,6 +141,10 @@ body {
     padding: 10px 14px;
 }
 
+/*
+    the hover
+*/
+
 .back-button:hover {
     background: rgba(99, 97, 97, 0.759);
     /* brighter background on hover */
@@ -152,7 +156,7 @@ body {
 
 
 /* 
-   Banner image
+   banner image
 */
 .banner img {
     width: 100%;
@@ -165,7 +169,7 @@ body {
 }
 
 /* 
-   Article container
+   article container
 */
 .article {
     font-family: "PortFont", monospace;
@@ -180,7 +184,7 @@ body {
 }
 
 /* 
-   Article header
+   article header
 */
 .article-title {
     font-family: "PortFont", monospace;
@@ -192,7 +196,7 @@ body {
 }
 
 /* 
-   Article subheader
+   article subheader
 */
 .article-sub {
     font-family: "PortFont", monospace;
@@ -207,7 +211,7 @@ body {
 }
 
 /*
-    Link to website
+    link to website
 */
 
 .banner a {
@@ -218,7 +222,9 @@ body {
         /* make link white */
     }
     
-        /* Hover */
+/*
+    hover
+*/
         a:hover {
             color: rgb(197, 197, 202);
  
