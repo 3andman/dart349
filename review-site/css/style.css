@@ -13,8 +13,17 @@
 body {
     min-height: 100vh;
     /* makes fit screen height */
-    background: #555761;
-    /* background color */
+    
+    /* background image*/
+    background-image: url("assets/images/bkg.jpg");
+    background-size: cover;
+    /* fills screen */
+    background-position: center;
+    /* keeps it centered */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* optional parallax feel */
     font-family: "PortFont",
         monospace;
     color: white;
