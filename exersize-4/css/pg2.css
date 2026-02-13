@@ -1,0 +1,30 @@
+body {
+    font-family: system-ui, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+#big {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#small {
+    margin-top: 12px;
+    opacity: 0.75;
+}

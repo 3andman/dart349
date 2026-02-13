@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+}
+
+/* shared section style */
+.panel {
+    height: 100vh;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* typography */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* individual moods */
+.intro {
+    background: #0b1020;
+}
+
+.morning {
+    background: #1d3557;
+}
+
+.midday {
+    background: #457b9d;
+}
+
+.afternoon {
+    background: #e63946;
+}
+
+.night {
+    background: #2a2a2a;
+}
+
+.outro {
+    background: black;
+    text-align: center;
+}
+
+/* small detail */
+.scroll {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}

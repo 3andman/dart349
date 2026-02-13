@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PG2</title>
+    <link rel="stylesheet" href="css/pg2.css" />
+</head>
+
+<body>
+    <a class="back" href="index.html">← Back</a>
+
+    <div id="big">RENT ↑</div>
+    <p id="small">Costs rise faster than wages.</p>
+
+<script>
+    const steps = [
+        ["RENT ↑", "Costs rise faster than wages.", "#666666"],  // medium gray
+        ["WORK HOURS ↑", "More shifts just to stay afloat.", "#555555"],
+        ["SLEEP ↓", "Late shifts + commutes reduce rest.", "#444444"],
+        ["STRESS ↑", "Pressure becomes constant anxiety.", "#333333"],
+        ["HEALTH ↓", "Burnout hits mind and body.", "#222222"],
+        ["OPTIONS ↓", "Less time, less energy, fewer choices.", "#111111"],
+        ["SYSTEM", "It’s not personal failure. It’s design.", "#000000"] // black
+    ];
+
+    let i = 0;
+
+    const big = document.getElementById("big");
+    const small = document.getElementById("small");
+
+    // 🔑 set initial background + text on load
+    document.body.style.background = steps[0][2];
+
+    document.addEventListener("keydown", () => {
+        if (i >= steps.length - 1) return;
+
+        i++;
+        big.textContent = steps[i][0];
+        small.textContent = steps[i][1];
+        document.body.style.background = steps[i][2];
+    });
+</script>
+</body>
+
+</html>
