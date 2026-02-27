@@ -14,94 +14,123 @@
         DART 349 Proposal
     </header>
 
-    <main>
+    <main class="essay-grid-container">
 
-<section>
-    <h2>Concept Overview</h2>
-    <p>So the idea for this project is a website that pretends to be a computer on Windows XP. It’s split into
-        three pages that gradually make the user feel frustrated with the system, not at all saying windows xp was frustrating, i thougt og the idea and then decided to style it that way. First, there’s a login page that asks you to select your user, whichever user you click will give you an error message along with any keypressed, etc. Eventually you'll figure out how.
-        Next, the desktop page, where clicking icons, typing, or trying to close windows triggers error messages that
-        stack up and pile on top of each other. Finally, the only app that works is a little minigame that actually works but even it subtly
-        reminds you that you’ve messed up a million times.</p>
+        <section>
+            <h2>Concept Overview</h2>
+            <p>So the idea for this project is a website that pretends to be a computer on Windows XP. It’s split into
+                three pages that gradually make the user feel frustrated with the system, not at all saying windows xp
+                was frustrating, i thougt og the idea and then decided to style it that way. First, there’s a login page
+                that asks you to select your user, whichever user you click will give you an error message along with
+                any keypressed, etc. Eventually you'll figure out how.
+                Next, the desktop page, where clicking icons, typing, or trying to close windows triggers error messages
+                that
+                stack up and pile on top of each other. Finally, the only app that works is a little minigame that
+                actually works but even it subtly
+                reminds you that you’ve messed up a million times.</p>
 
-    <p>The project basically works as a computer. The login page is gatekeeping, you can’t get in, no
-        matter what. The desktop stage ramps up frustration with systemic obstruction, popups, and visual chaos. The
-        mini game is nice. Early error
-        messages are about technical corrections, like “Invalid input” or “Action not allowed,” but as users keep
-        interacting, the messages get less formal, like “Why would you do that?”. This
-        escalation is meant to feel like an argument with the system itself.</p>
+            <p>The project basically works as a computer. The login page is gatekeeping, you can’t get in, no
+                matter what. The desktop stage ramps up frustration with systemic obstruction, popups, and visual chaos.
+                The
+                mini game is nice. Early error
+                messages are about technical corrections, like “Invalid input” or “Action not allowed,” but as users
+                keep
+                interacting, the messages get less formal, like “Why would you do that?”. This
+                escalation is meant to feel like an argument with the system itself.</p>
 
-    <p>Basically, the whole point is to turn blame culture into an interactive experience. Users don’t just read about
-        just read about it they have to go through it. The interface itself becomes the story. By structuring blame into the website, we can show how systems can make people feel responsible for
-        failure even when the fault isn’t theirs. It’s both funny and frustrating, and hopefully a little
-        thought provoking. People immediately get it because they’ve all experienced those annoying
-        error messages at some point.</p>
-</section>
+            <p>Basically, the whole point is to turn blame culture into an interactive experience. Users don’t just read
+                about
+                just read about it they have to go through it. The interface itself becomes the story. By structuring
+                blame into the website, we can show how systems can make people feel responsible for
+                failure even when the fault isn’t theirs. It’s both funny and frustrating, and hopefully a little
+                thought provoking. People immediately get it because they’ve all experienced those annoying
+                error messages at some point.</p>
+        </section>
 
-<section>
-    <h2>Art Direction</h2>
-    <p>For visuals, the project leans heavily on Windows XP nostalgia. With the classic hill wallpaper, blue
-        taskbar, grey dialog boxes, and old system typography. The XP look is immediately recognizable, so users
-        trust the interface at first glance. The login screen feels official, like a real system, and the
-        desktop mimics a normal one. Even the error popups are designed to look
-        like the ones from classic Windows.</p>
+        <section>
+            <h2>Art Direction</h2>
+            <p>For visuals, the project leans heavily on Windows XP nostalgia. With the classic hill wallpaper, blue
+                taskbar, grey dialog boxes, and old system typography. The XP look is immediately recognizable, so users
+                trust the interface at first glance. The login screen feels official, like a real system, and the
+                desktop mimics a normal one. Even the error popups are designed to look
+                like the ones from classic Windows.</p>
 
-    <p>But as you interact, the interface starts to feel chaotic. Popups start stacking, windows overlap, and the
-        desktop fills with visual clutter. Clicking multiple icons at once triggers new messages, and the screen begins
-        to feel crowded. The visual chaos is funny because it’s exaggerated, but it also makes a point
-        about how interfaces can manipulate user behavior. The XP look gives a false sense of security, making the
-        system feel trustworthy while it slowly becomes evil.</p>
-</section>
+            <p>But as you interact, the interface starts to feel chaotic. Popups start stacking, windows overlap, and
+                the
+                desktop fills with visual clutter. Clicking multiple icons at once triggers new messages, and the screen
+                begins
+                to feel crowded. The visual chaos is funny because it’s exaggerated, but it also makes a point
+                about how interfaces can manipulate user behavior. The XP look gives a false sense of security, making
+                the
+                system feel trustworthy while it slowly becomes evil.</p>
+        </section>
 
-<section>
-    <h2>Technical Approach</h2>
-    <p>The website is built using HTML, CSS, and JavaScript. Each of the three narrative stages, login,
-        desktop, and mini game, exists as its own page, but they flow together seamlessly. CSS Grid handles the desktop
-        layout so icons are arranged in a way that looks clean but allows stacking windows. The taskbar and popups use
-        fixed positioning, replicating the layering you’d see in a real Windows XP environment. It’s all about
-        recreating that familiar desktop experience.</p>
+        <section>
+            <h2>Technical Approach</h2>
+            <p>The website is built using HTML, CSS, and JavaScript. Each of the three narrative stages, login,
+                desktop, and mini game, exists as its own page, but they flow together seamlessly. CSS Grid handles the
+                desktop
+                layout so icons are arranged in a way that looks clean but allows stacking windows. The taskbar and
+                popups use
+                fixed positioning, replicating the layering you’d see in a real Windows XP environment. It’s all about
+                recreating that familiar desktop experience.</p>
 
-    <p>Interaction will handled by JavaScript classes. Every time you perform an
-        action clicking an icon, typing, or trying to close a window the class creates a new popup element with different overlayed text and adds it
-        to the DOM. popups might get random placement. Event listeners track
-        actions and trigger new popups, and a counter variable escalates the tone of messages. Early popups look like
-        normal technical warnings, but later messages start to get weird.</p>
+            <p>Interaction will handled by JavaScript classes. Every time you perform an
+                action clicking an icon, typing, or trying to close a window the class creates a new popup element with
+                different overlayed text and adds it
+                to the DOM. popups might get random placement. Event listeners track
+                actions and trigger new popups, and a counter variable escalates the tone of messages. Early popups look
+                like
+                normal technical warnings, but later messages start to get weird.</p>
 
-    <p>The mini game on the last page functions as a controlled loop. It seems to just be fun, but it still
-        punishes the user for minor mistakes, reinforcing the same cycle. Technically, this mirrors the concept, the
-        system is structured and rule based, but ultimately obstructive. The experience turns coding
-        mechanics into a narrative, showing how simple UI logic can create frustration and illustrate blame culture in
-        action.</p>
- </section>
+            <p>The mini game on the last page functions as a controlled loop. It seems to just be fun, but it still
+                punishes the user for minor mistakes, reinforcing the same cycle. Technically, this mirrors the concept,
+                the
+                system is structured and rule based, but ultimately obstructive. The experience turns coding
+                mechanics into a narrative, showing how simple UI logic can create frustration and illustrate blame
+                culture in
+                action.</p>
+        </section>
 
- <section>
-    <h2>Blame Culture</h2>
-    <p>Blame culture is basically when organizations or systems focus on blaming people instead of looking at the bigger
-        picture. Mistakes are treated as personal failures rather than consequences of design flaws, confusing policies,
-        or heavy workloads. The school system causes students to suffer from this a ton. This approach protects institutions and shifts pressure onto individuals, making them feel
-        responsible for things that aren’t really their fault.</p>
+        <section>
+            <h2>Blame Culture</h2>
+            <p>Blame culture is basically when organizations or systems focus on blaming people instead of looking at
+                the bigger
+                picture. Mistakes are treated as personal failures rather than consequences of design flaws, confusing
+                policies,
+                or heavy workloads. The school system causes students to suffer from this a ton. This approach protects
+                institutions and shifts pressure onto individuals, making them feel
+                responsible for things that aren’t really their fault.</p>
 
-    <p>In digital interfaces, this happens a lot. Error messages rarely admit that a system is confusing or poorly
-        designed. For example the concordia websites have some navigation probems that punish the user for clicking back in their browser and not the button they placed. Even
-        small mistakes feel like personal failure. This subtle messaging reflects how blame culture operates in the real
-        world.</p>
+            <p>In digital interfaces, this happens a lot. Error messages rarely admit that a system is confusing or
+                poorly
+                designed. For example the concordia websites have some navigation probems that punish the user for
+                clicking back in their browser and not the button they placed. Even
+                small mistakes feel like personal failure. This subtle messaging reflects how blame culture operates in
+                the real
+                world.</p>
 
-    <p>Research in organizational behavior shows that blaming individuals discourages transparency and prevents systems
-        from improving. By focusing attention downward, institutions avoid examining the bigger structural issues that
-        cause repeated errors. The same logic applies to software, a user interface can create a sense of
-        personal failure without acknowledging design problems.</p>
+            <p>Research in organizational behavior shows that blaming individuals discourages transparency and prevents
+                systems
+                from improving. By focusing attention downward, institutions avoid examining the bigger structural
+                issues that
+                cause repeated errors. The same logic applies to software, a user interface can create a sense of
+                personal failure without acknowledging design problems.</p>
 
-    <p>This project turns that idea into an experience. From the login screen that always rejects input, to the desktop
-        full of stacking popups, to the mini game that seems fun but still enforces rules, the user feels what it’s like
-        to be blamed. The progression of frustration and
-        escalating popups dramatizes how systems can subtly pressure users, showing the mechanics of blame in a way
-        that’s interactive, humorous, and a little bit painful.</p>
-</section>
+            <p>This project turns that idea into an experience. From the login screen that always rejects input, to the
+                desktop
+                full of stacking popups, to the mini game that seems fun but still enforces rules, the user feels what
+                it’s like
+                to be blamed. The progression of frustration and
+                escalating popups dramatizes how systems can subtly pressure users, showing the mechanics of blame in a
+                way
+                that’s interactive, humorous, and a little bit painful.</p>
+        </section>
 
     </main>
 
     <nav>
-        <a href="figma.html" class="nav-button">Next → Figma Prototype</a>
+        <a href="art.html" class="nav-button">Next → Art Direction</a>
     </nav>
 
 </body>
