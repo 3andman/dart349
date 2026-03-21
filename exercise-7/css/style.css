@@ -1,0 +1,66 @@
+/* Base styles (applied to all screens) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #2980b9;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #1f618d;
+}
+
+.container {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px (tablets & mobiles) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    header {
+        font-size: 18px;
+    }
+}
+
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+}
