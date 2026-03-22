@@ -1,4 +1,4 @@
-/* Base styles (applied to all screens) */
+/* base styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -43,7 +43,7 @@ footer {
 
 /* Media Queries */
 
-/* For screens smaller than 768px (tablets & mobiles) */
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -54,7 +54,7 @@ footer {
     }
 }
 
-/* For screens smaller than 480px (phones) */
+/* For screens smaller than 480px */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
