@@ -1,0 +1,295 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #e0e2e7;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #0078D7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.essay-container {
+    max-width: 900px;
+    margin: 20px auto;
+    /* center */
+    padding: 30px;
+    background-color: white;
+    /* card effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d0d2d7;
+    /* subtle separation */
+}
+
+section h2 {
+    color: #0078D7;
+    /* matches header and buttons */
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+.essay-container p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.essay-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 columns */
+    grid-template-rows: 1fr 1fr;
+    /* 2 rows */
+    gap: 20px;
+    height: 90vh;
+    /* full viewport height */
+    max-width: 100%;
+    /* don't overflow horizontally */
+    padding: 5px;
+    /* space around grid */
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* hide any accidental overflow */
+}
+
+.essay-grid-container section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    text-align: justify;
+    overflow-y: auto;
+    /* allows scrolling inside a section if content is too long */
+}
+
+/* Stack sections on smaller screens */
+@media (max-width: 900px) {
+    .essay-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Figma iframe fully filling screen */
+.figma-section {
+    width: 90vw;
+    /* full viewport width */
+    height: 90vh;
+    /* full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+.figma-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+/* Navigation Buttons */
+nav {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.nav-button {
+    background-color: #0078D7;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s;
+    margin-left: 5px;
+}
+
+.nav-button:hover {
+    background-color: #005a9e;
+}
+
+/* Color palette */
+.color-palette {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.color-swatch {
+    flex: 1;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    margin: 0 5px;
+}
+
+/* 2x2 responsive image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+/* Images fill the squares completely */
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Typography section examples bigger */
+.typography-section p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* FULL SCREEN XP BACKGROUND */
+
+.xp-body {
+    margin: 0;
+    height: 100vh;
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(to right, #5a7edc, #3a6ad6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN CONTENT */
+
+.xp-container {
+    display: flex;
+    justify-content: center;
+    /* instead of space-between */
+    align-items: center;
+    gap: 320px;
+    /* controls spacing between logo + users */
+    height: 100%;
+    color: white;
+}
+
+/* LEFT SIDE */
+
+.xp-left {
+    text-align: center;
+}
+
+.xp-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.xp-instruction {
+    font-size: 20px;
+}
+
+/* RIGHT SIDE USERS */
+
+.xp-users {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.xp-user {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 35px;
+    width: 380px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover Glow */
+.xp-user:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: scale(1.02);
+}
+
+.xp-user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+}
+
+.xp-user h3 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.xp-user p {
+    font-size: 16px;
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+}
+
+/* BOTTOM BAR */
+
+.xp-bottom-bar {
+    background: linear-gradient(to right, #1f3fbf, #0c2a9e);
+    color: white;
+    padding: 12px 40px;
+    font-size: 18px;
+}
+
+.xp-shutdown {
+    display: inline-block;
+}
+
+.error-image {
+    position: absolute;
+    width: 300px;
+    pointer-events: auto;
+    /* allow mouse events */
+    cursor: grab;
+    /* optional, shows draggable cursor */
+}
