@@ -1,30 +1,21 @@
-console.log("JS loaded");
+console.log("login.js loaded");
 
-let zIndexCounter = 100;
-let count = 0; // start at 0
+document.addEventListener("DOMContentLoaded", () => {
+  const loginMessages = [
+    "User profile cannot be loaded.",
+    "Invalid credentials.",
+    "Access denied.",
+    "That was not correct.",
+    "Why would you do that?",
+    "Please stop clicking.",
+    "This is becoming concerning.",
+  ];
 
-document.addEventListener("mousedown", function () {
-    const errorImg = document.createElement("img");
-    errorImg.src = "assets/images/xp-error.jpg";
-    errorImg.className = "error-image";
-    
-    count++; // increment on each click
-    document.body.appendChild(errorImg);
+  const users = document.querySelectorAll(".xp-user");
 
-    let x, y;
-
-    if (count === 1) {
-        // first fixed position
-        x = 1100;
-        y = 600;
-    } else {
-        // then random position
-        x = Math.random() * (window.innerWidth - 300);
-        y = Math.random() * (window.innerHeight - 300);
-    }
-
-    errorImg.style.position = "absolute"; // make sure it's positioned
-    errorImg.style.left = x + "px";
-    errorImg.style.top = y + "px";
-    errorImg.style.zIndex = zIndexCounter++;
+  users.forEach((user) => {
+    user.addEventListener("click", () => {
+      new ErrorPopup(loginMessages);
+    });
+  });
 });
