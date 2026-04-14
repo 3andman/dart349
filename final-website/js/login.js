@@ -2,11 +2,10 @@ console.log("login.js loaded");
 
 /* runs after page fully loads so elements exist */
 document.addEventListener("DOMContentLoaded", () => {
-   
-    const loginSound = document.getElementById("login-sound");
-    loginSound.play().catch(() => {});
-    loginSound.volume = 0.2
-    
+  const loginSound = document.getElementById("login-sound");
+  loginSound.play().catch(() => {});
+  loginSound.volume = 0.2;
+
   /* all progressive login error messages in order */
   const loginMessages = [
     "User profile cannot be loaded.",
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (clickCount < loginMessages.length) {
         messageIndex = clickCount;
       } else {
-      /* after end of array, always repeat last message */
+        /* after end of array, always repeat last message */
         messageIndex = loginMessages.length - 1;
       }
 

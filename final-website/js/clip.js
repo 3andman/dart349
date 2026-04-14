@@ -120,9 +120,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ordered messages clippy says when clicked */
   const messages = [
-    "Don't click me, what are you trying to accomplish?",
-    "You don't think before you act, do you?",
-    "Taking your own failures out on me?",
+    "You think I should help you?",
+    "Is it my fault you cant navigate your own system?.",
+    "Don't you think you should figure it out on your own?",
     "Fine, I wont mess with you anymore, do what you want.",
   ];
 
