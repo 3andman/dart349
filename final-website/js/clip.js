@@ -1,4 +1,6 @@
 window.clippyFinished = false;
+window.audioUnlocked = false;
+window.appsUnlocked = localStorage.getItem("appsUnlocked") === "true";
 
 /* stores active timeout ids so we can cancel all idle messages when needed */
 let timers = [];
@@ -36,14 +38,21 @@ class Clippy {
   /* main function used to make clippy speak
      updates text and plays animation */
   say(message) {
-    /* block all dialogue if system is unlocked */
-    if (window.appsUnlocked) return;
-
-    /* set the text inside bubble */
     this.text.textContent = message;
-
-    /* ensure bubble is visible when speaking */
     this.show();
+
+    /* restart animation */
+    this.bubble.offsetHeight;
+    this.bubble.style.animation = "bubblePop 0.2s ease-out";
+
+    /* play sound every line */
+    const sound = document.getElementById("clippy-sound");
+
+    if (sound) {
+      sound.currentTime = 0;
+      sound.volume = 0.05;
+      sound.play().catch(() => {});
+    }
 
     /* reset animation so it replays every time clippy speaks */
     this.bubble.style.animation = "none";
@@ -60,6 +69,13 @@ class Clippy {
 document.addEventListener("DOMContentLoaded", () => {
   /* create global clippy instance so other scripts can use it */
   window.clippy = new Clippy(".clippy");
+
+  /* if already unlocked, disable clippy immediately */
+  if (window.appsUnlocked) {
+    window.stopClippyTimers();
+    clippy.hide();
+    return;
+  }
 
   /* unused variable kept from earlier structure */
   let firstClickDone = false;
@@ -110,10 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "Fine, I wont mess with you anymore, do what you want.",
   ];
 
-  /* system state
-     when true, clippy stops interfering and apps become usable */
-  window.appsUnlocked = false;
-
   /* reference to clippy dom element */
   const clippyRoot = document.querySelector(".clippy");
 
@@ -135,8 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (clickCount >= messages.length) {
       window.appsUnlocked = true;
 
+      localStorage.setItem("appsUnlocked", "true");
+
       /* final surrender line */
       clippy.say("Fine, I wont mess with you anymore, do what you want.");
     }
   });
 });
+
+document.addEventListener(
+  "click",
+  () => {
+    window.audioUnlocked = true;
+  },
+  { once: true },
+);

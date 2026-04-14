@@ -2,6 +2,11 @@ console.log("login.js loaded");
 
 /* runs after page fully loads so elements exist */
 document.addEventListener("DOMContentLoaded", () => {
+   
+    const loginSound = document.getElementById("login-sound");
+    loginSound.play().catch(() => {});
+    loginSound.volume = 0.2
+    
   /* all progressive login error messages in order */
   const loginMessages = [
     "User profile cannot be loaded.",
@@ -10,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Incorrect.",
     "Why would you do that?",
     "This is becoming concerning.",
-    "You're useless",
+    "You're useless.",
     "It shouldn't be this difficult.",
     "Maybe you shouldn't be using this system.",
     "Please stop clicking.",

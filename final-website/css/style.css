@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/perfect-dos-vga-437');
 /* reset */
 * {
     margin: 0;
@@ -7,7 +8,7 @@
 
 /* base body styling */
 body {
-    font-family: Tahoma, sans-serif;
+    font-family: "Perfect DOS VGA 437", monospace;
 
     /* simple fade-in when page loads */
     animation: pageFade 0.25s ease-out;
@@ -146,7 +147,7 @@ body {
 
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 
-    font-family: Tahoma, sans-serif;
+font-family: "Perfect DOS VGA 437", monospace;
 
     display: flex;
     flex-direction: column;
@@ -156,7 +157,7 @@ body {
 }
 
 /* extra chaos animation for later popups */
-.error-popup:nth-child(n+10) {
+.error-popup:nth-child(n+15) {
     animation:
         popupAppear 0.1s ease-out,
         slightJitter 0.05s infinite alternate;
@@ -235,8 +236,7 @@ body {
     padding: 6px 25px;
 
     font-size: 18px;
-    font-family: Tahoma, sans-serif;
-
+font-family: "Perfect DOS VGA 437", monospace;
     background: #ece9d8;
 
     border: 2px solid #888;
@@ -303,6 +303,7 @@ body {
     cursor: pointer;
 
     transition: transform 0.15s ease;
+    margin-top: 25px;
 }
 
 /* icon hover movement */
@@ -382,10 +383,12 @@ body {
     text-align: center;
 
     font-size: 28px;
-    font-family: Tahoma;
+font-family: "Perfect DOS VGA 437", monospace;
 
     color: black;
     padding-bottom: 15px;
+    
+    white-space: pre-line;
 }
 
 /* clippy character image */
@@ -429,7 +432,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 
-    font-family: Tahoma, sans-serif;
+   
 
     display: flex;
     align-items: flex-start;
@@ -438,7 +441,7 @@ body {
 /* notes content layout */
 .notes-container {
     margin-top: 270px;
-    margin-left: 250px;
+    margin-left: 200px;
     margin-right: 500px;
 }
 
@@ -467,38 +470,37 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 
-    font-family: Tahoma, sans-serif;
-    color: #111;
+   
+
+    display: flex;
+    align-items: flex-start;
 }
 
-/* recycle content layout */
+/* notes content layout */
 .recycle-container {
-    max-width: 750px;
-    margin: 160px auto;
-    padding: 20px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
-/* recycle title */
+/* notes title */
 .recycle-title {
-    font-size: 32px;
-    margin-bottom: 25px;
+    font-size: 34px;
+    margin-bottom: 55px;
 }
 
-/* recycle sections */
-.recycle-section {
-    margin-bottom: 30px;
+/* notes text body */
+.recycle-text {
+    font-size: 38px;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
 }
 
-.recycle-section h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* recycle footer note */
 .recycle-footer {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.7;
+    margin-top: 40px;
 }
 
 /* responsive design */

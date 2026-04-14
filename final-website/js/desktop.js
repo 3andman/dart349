@@ -1,5 +1,7 @@
 console.log("desktop loaded");
 
+window.appsUnlocked = localStorage.getItem("appsUnlocked") === "true";
+
 /* helper function to open apps or trigger clippy fallback messages */
 function openApp(message, url) {
   /* if clippy has a global shutdown function, run it */
@@ -19,7 +21,10 @@ function openApp(message, url) {
 
 /* computer icon */
 document.getElementById("computer").addEventListener("click", () => {
-  openApp("You don't know how to use any of that stuff.", "pages/computer.html");
+  openApp(
+    "You don't know how to use any of that stuff.",
+    "pages/computer.html",
+  );
 });
 
 /* internet explorer icon */
@@ -35,7 +40,7 @@ document.getElementById("documents").addEventListener("click", () => {
 /* notes app */
 document.getElementById("notes").addEventListener("click", () => {
   openApp(
-    "The only note you have in there is ''buy eggs''.",
+    'The only note you have in there is \n"buy eggs"',
     "pages/notes.html",
   );
 });
@@ -54,3 +59,16 @@ document.getElementById("time").addEventListener("mouseenter", () => {
 document.getElementById("menu").addEventListener("click", () => {
   clippy.say("You haven't set that up yet.");
 });
+
+/* login button resets system state */
+const loginButton = document.getElementById("login");
+
+if (loginButton) {
+  loginButton.addEventListener("click", () => {
+    /* remove saved unlock state */
+    localStorage.removeItem("appsUnlocked");
+
+    /* optional: also reset audio unlock */
+    localStorage.removeItem("audioUnlocked");
+  });
+}
