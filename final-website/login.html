@@ -4,56 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Windows XP</title>
+
+    <!-- main stylesheet for all pages -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="xp-body">
 
+    <!-- main login layout container -->
     <div class="xp-container">
 
-        <!-- Left Side -->
+        <!-- left side branding / instruction area -->
         <div class="xp-left">
+
+            <!-- windows xp style logo -->
             <img src="assets/images/windows-logo.png" class="xp-logo">
-            
-<p class="xp-instruction" id="instruction-text">
-    To begin, click your <a href="desktop.html" class="xp-link">user name</a>
-</p>
+
+            <!-- instruction text shown to user -->
+            <!-- this is also used as a "protected zone" for error popup avoidance in js -->
+            <p class="xp-instruction" id="instruction-text">
+                To begin, click your <a href="desktop.html" class="xp-link">user name</a>
+            </p>
+
         </div>
 
-        <!-- Right Side Users -->
+        <!-- right side user selection list -->
         <div class="xp-users">
 
+            <!-- user 1 card -->
             <div class="xp-user" role="button">
+
+                <!-- avatar image -->
                 <img src="assets/images/user1.jpg">
+
+                <!-- user info text block -->
                 <div>
                     <h3>Administrator</h3>
                     <p>4 programs running</p>
                 </div>
+
             </div>
 
+            <!-- user 2 card -->
             <div class="xp-user" role="button">
+
                 <img src="assets/images/user2.jpg">
+
                 <div>
                     <h3>Space man</h3>
                 </div>
+
             </div>
 
+            <!-- user 3 card -->
             <div class="xp-user" role="button">
+
                 <img src="assets/images/user3.jpg">
+
                 <div>
                     <h3>Cat</h3>
                 </div>
+
             </div>
 
         </div>
 
     </div>
 
+    <!-- bottom system bar (xp style footer) -->
     <div class="xp-bottom-bar">
         <div class="xp-shutdown">Turn off computer</div>
     </div>
 
+    <!-- error system (popup generator logic) -->
     <script src="js/error.js"></script>
+
+    <!-- login interaction logic (progressive error messages etc.) -->
     <script src="js/login.js"></script>
 
 </body>

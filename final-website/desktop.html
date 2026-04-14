@@ -3,35 +3,91 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- page title shown in browser tab -->
     <title>Windows XP - Desktop</title>
+
+    <!-- main shared stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="xp-desktop">
 
-    <!-- DESKTOP AREA -->
+    <!-- main desktop icon area -->
     <div class="desktop-area">
 
-        <div class="desktop-icon">
-            <img src="assets/images/my-computer.png">
+        <!-- computer shortcut -->
+        <div class="desktop-icon" id="computer">
+            <img src="assets/images/computer.png">
             <p>My Computer</p>
         </div>
 
-        <div class="desktop-icon">
-            <img src="assets/images/recycle-bin.png">
+        <!-- internet shortcut -->
+        <div class="desktop-icon" id="internet">
+            <img src="assets/images/internet.png">
+            <p>Internet Explorer</p>
+        </div>
+
+        <!-- documents shortcut -->
+        <div class="desktop-icon" id="documents">
+            <img src="assets/images/folder.png">
+            <p>Documents</p>
+        </div>
+
+        <!-- notes shortcut -->
+        <div class="desktop-icon" id="notes">
+            <img src="assets/images/notepad.png">
+            <p>Notes</p>
+        </div>
+
+        <!-- recycle bin shortcut -->
+        <div class="desktop-icon" id="recycle">
+            <img src="assets/images/recycle.png">
             <p>Recycle Bin</p>
         </div>
 
     </div>
 
-    <!-- TASKBAR -->
-    <div class="xp-taskbar">
-        <div class="start-button">Start</div>
-        <div class="taskbar-right">12:00 AM</div>
+    <!-- clippy assistant system -->
+    <div class="clippy">
+
+        <!-- speech bubble container -->
+        <div class="clip-bubble">
+
+            <!-- bubble image background -->
+            <img src="assets/images/bubble.png" class="bubble-img">
+
+            <!-- dynamic text inserted by js -->
+            <div class="clip-text"></div>
+
+        </div>
+
+        <!-- clippy character image -->
+        <img src="assets/images/clippy.gif" class="clippy-img">
+
     </div>
 
-    <script src="js/error.js"></script>
+    <!-- taskbar at bottom of desktop -->
+    <div class="xp-taskbar">
+
+        <!-- login button (returns to login screen) -->
+        <div class="menu-button" id="login">
+            <a href="login.html" class="xp-link">Login</a>
+        </div>
+
+        <!-- placeholder menu button -->
+        <div class="menu-button" id="menu">Menu</div>
+
+        <!-- fake system clock -->
+        <div class="taskbar-right" id="time">12:00 AM</div>
+
+    </div>
+
+    <!-- desktop interaction logic -->
     <script src="js/desktop.js"></script>
+
+    <!-- clippy dialogue + behaviour system -->
+    <script src="js/clip.js"></script>
 
 </body>
 
