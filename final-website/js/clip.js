@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "You think I should help you?",
     "Is it my fault you cant navigate your own system?.",
     "Don't you think you should figure it out on your own?",
-    "Fine, I wont mess with you anymore, do what you want.",
+    "Man I'm tired of this, do what you want.",
   ];
 
   /* reference to clippy dom element */
