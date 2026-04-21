@@ -4,7 +4,6 @@ window.appsUnlocked = localStorage.getItem("appsUnlocked") === "true";
 
 /* helper function to open apps or trigger clippy fallback messages */
 function openApp(message, url) {
-  /* if clippy has a global shutdown function, run it */
   if (window.stopClippyTimers) {
     window.stopClippyTimers();
   }
@@ -51,7 +50,7 @@ document.getElementById("recycle").addEventListener("click", () => {
 });
 
 /* taskbar clock hover insult */
-document.getElementById("time").addEventListener("mouseenter", () => {
+document.getElementById("time").addEventListener("click", () => {
   clippy.say("Yeah, you're wasting my time too.");
 });
 
@@ -59,6 +58,8 @@ document.getElementById("time").addEventListener("mouseenter", () => {
 document.getElementById("menu").addEventListener("click", () => {
   clippy.say("You haven't set that up yet.");
 });
+
+
 
 /* login button resets system state */
 const loginButton = document.getElementById("login");

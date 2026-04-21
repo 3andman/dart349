@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("appsUnlocked", "true");
 
       /* final surrender line */
-      clippy.say("Fine, I wont mess with you anymore, do what you want.");
+      clippy.say("Man I'm tired of this, do what you want.");
     }
   });
 });
